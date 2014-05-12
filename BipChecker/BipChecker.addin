@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Built-in Parameter Checker</Text>
+    <Description>List all built-in parameters on selected element or its type</Description>
+    <Assembly>BipChecker.dll</Assembly>
+    <FullClassName>BipChecker.BuiltInParamsChecker</FullClassName>
+    <ClientId>6935a565-7138-43b7-8e17-9bca273dc5e4</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
