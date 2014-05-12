@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "The Building Coder http://thebuildingcoder.typepad.com" )]
 [assembly: AssemblyProduct( "Revit Built-In Parameter Checker" )]
-[assembly: AssemblyCopyright( "Copyright 2011 © Jeremy Tammik Autodesk Inc." )]
+[assembly: AssemblyCopyright( "Copyright 2011-2014 © Jeremy Tammik Autodesk Inc." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2014.0.0.3")]
-[assembly: AssemblyFileVersion("2014.0.0.3")]
+[assembly: AssemblyVersion("2015.0.0.3")]
+[assembly: AssemblyFileVersion("2015.0.0.3")]
