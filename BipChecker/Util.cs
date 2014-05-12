@@ -1,5 +1,6 @@
 #region Namespaces
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -179,12 +180,25 @@ namespace BipChecker
         UIDocument uidoc )
     {
       Element e = null;
-      ElementSet ss = uidoc.Selection.Elements;
-      if( 1 == ss.Size )
+
+      // 2014
+      //ElementSet ss = uidoc.Selection.Elements; // 2014
+      //if( 1 == ss.Size )
+      //{
+      //  ElementSetIterator iter = ss.ForwardIterator();
+      //  iter.MoveNext();
+      //  e = iter.Current as Element;
+      //}
+
+      ICollection<ElementId> ids
+        = uidoc.Selection.GetElementIds(); // 2015
+
+      if( 1 == ids.Count )
       {
-        ElementSetIterator iter = ss.ForwardIterator();
-        iter.MoveNext();
-        e = iter.Current as Element;
+        foreach( ElementId id in ids )
+        {
+          e = uidoc.Document.GetElement( id );
+        }
       }
       else
       {
@@ -217,31 +231,31 @@ namespace BipChecker
             }
             else
             {
-                int id;
-                if (int.TryParse(sid, out id))
-                {
-                    ElementId elementId = new ElementId(
-                        id);
+              int id;
+              if( int.TryParse( sid, out id ) )
+              {
+                ElementId elementId = new ElementId(
+                    id );
 
 
-                    e = uidoc.Document.GetElement(elementId);
-                    if (null == e)
-                    {
-                        ErrorMsg(string.Format(
-                            "Invalid element id '{0}'.",
-                            sid));
-                    }
-                }
-                else
+                e = uidoc.Document.GetElement( elementId );
+                if( null == e )
                 {
-                    e = uidoc.Document.GetElement(sid);
-                    if (null == e)
-                    {
-                        ErrorMsg(string.Format(
-                            "Invalid element id '{0}'.",
-                            sid));
-                    }
+                  ErrorMsg( string.Format(
+                      "Invalid element id '{0}'.",
+                      sid ) );
                 }
+              }
+              else
+              {
+                e = uidoc.Document.GetElement( sid );
+                if( null == e )
+                {
+                  ErrorMsg( string.Format(
+                      "Invalid element id '{0}'.",
+                      sid ) );
+                }
+              }
             }
           }
         }
@@ -292,18 +306,38 @@ namespace BipChecker
     {
       Element e = null;
 
-      ElementSet ss = uidoc.Selection.Elements;
+      //ElementSet ss = uidoc.Selection.Elements; // 2014
 
-      if( 1 == ss.Size )
+      //if( 1 == ss.Size )
+      //{
+      //  ElementSetIterator iter = ss.ForwardIterator();
+      //  iter.MoveNext();
+      //  Type t = iter.Current.GetType();
+      //  if( t.Equals( type ) || t.IsSubclassOf( type ) )
+      //  {
+      //    e = iter.Current as Element;
+      //  }
+      //}
+
+      ICollection<ElementId> ids
+        = uidoc.Selection.GetElementIds(); // 2015
+
+      if( 1 == ids.Count )
       {
-        ElementSetIterator iter = ss.ForwardIterator();
-        iter.MoveNext();
-        Type t = iter.Current.GetType();
+        Element e2 = null;
+
+        foreach( ElementId id in ids )
+        {
+          e2 = uidoc.Document.GetElement( id );
+        }
+        Type t = e2.GetType();
+
         if( t.Equals( type ) || t.IsSubclassOf( type ) )
         {
-          e = iter.Current as Element;
+          e = e2;
         }
       }
+
       if( null == e )
       {
         try
