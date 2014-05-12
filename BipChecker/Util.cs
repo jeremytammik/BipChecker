@@ -181,15 +181,6 @@ namespace BipChecker
     {
       Element e = null;
 
-      // 2014
-      //ElementSet ss = uidoc.Selection.Elements; // 2014
-      //if( 1 == ss.Size )
-      //{
-      //  ElementSetIterator iter = ss.ForwardIterator();
-      //  iter.MoveNext();
-      //  e = iter.Current as Element;
-      //}
-
       ICollection<ElementId> ids
         = uidoc.Selection.GetElementIds(); // 2015
 
@@ -305,19 +296,6 @@ namespace BipChecker
       Type type )
     {
       Element e = null;
-
-      //ElementSet ss = uidoc.Selection.Elements; // 2014
-
-      //if( 1 == ss.Size )
-      //{
-      //  ElementSetIterator iter = ss.ForwardIterator();
-      //  iter.MoveNext();
-      //  Type t = iter.Current.GetType();
-      //  if( t.Equals( type ) || t.IsSubclassOf( type ) )
-      //  {
-      //    e = iter.Current as Element;
-      //  }
-      //}
 
       ICollection<ElementId> ids
         = uidoc.Selection.GetElementIds(); // 2015
