@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "The Building Coder http://thebuildingcoder.typepad.com" )]
 [assembly: AssemblyProduct( "Revit Built-In Parameter Checker" )]
-[assembly: AssemblyCopyright( "Copyright 2011-2015 © Jeremy Tammik Autodesk Inc." )]
+[assembly: AssemblyCopyright( "Copyright 2011-2016 © Jeremy Tammik Autodesk Inc." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -38,6 +38,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 //
 // 2015-05-28 2016.0.0.0 migrated to Revit 2016
+// 2016-07-04 2017.0.0.0 migrated to Revit 2017
 //
-[assembly: AssemblyVersion("2016.0.0.0")]
-[assembly: AssemblyFileVersion("2016.0.0.0")]
+[assembly: AssemblyVersion("2017.0.0.0")]
+[assembly: AssemblyFileVersion("2017.0.0.0")]
