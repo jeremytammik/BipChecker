@@ -20,5 +20,5 @@ Jeremy Tammik,
 
 ## License
 
-This sample is licensed under the terms of the [MIT License](http://www.apache.org/licenses/LICENSE-2.0).
+This sample is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 Please see the [LICENSE](LICENSE) file for full details.
