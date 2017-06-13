@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
@@ -10,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "The Building Coder http://thebuildingcoder.typepad.com" )]
 [assembly: AssemblyProduct( "Revit Built-In Parameter Checker" )]
-[assembly: AssemblyCopyright( "Copyright 2011-2016 © Jeremy Tammik Autodesk Inc." )]
+[assembly: AssemblyCopyright( "Copyright 2011-2017 © Jeremy Tammik Autodesk Inc." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -39,6 +38,7 @@ using System.Runtime.InteropServices;
 //
 // 2015-05-28 2016.0.0.0 migrated to Revit 2016
 // 2016-07-04 2017.0.0.0 migrated to Revit 2017
+// 2017-06-13 2018.0.0.0 migrated to Revit 2018
 //
-[assembly: AssemblyVersion("2017.0.0.0")]
-[assembly: AssemblyFileVersion("2017.0.0.0")]
+[assembly: AssemblyVersion("2018.0.0.0")]
+[assembly: AssemblyFileVersion("2018.0.0.0")]
