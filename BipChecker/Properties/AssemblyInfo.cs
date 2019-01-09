@@ -40,6 +40,7 @@ using System.Runtime.InteropServices;
 // 2016-07-04 2017.0.0.0 migrated to Revit 2017
 // 2017-06-13 2018.0.0.0 migrated to Revit 2018
 // 2019-01-09 2018.0.0.1 incremented copyright year to 2019
+// 2019-01-09 2019.0.0.0 flat migration to Revit 2019
 //
-[assembly: AssemblyVersion("2018.0.0.1")]
-[assembly: AssemblyFileVersion("2018.0.0.1")]
+[assembly: AssemblyVersion("2019.0.0.0")]
+[assembly: AssemblyFileVersion("2019.0.0.0")]
